@@ -1,0 +1,14 @@
+{
+  "appName": "Art Inventory App",
+  "themeColor": "#3498db",
+  "apiEndpoint": "https://api.example.com",
+  "enableDebugging": true,
+  "dependencies": {
+    "flutter": {
+      "sdk": "flutter"
+    },
+    "image_picker": "^0.8.4+4",
+    "path_provider": "^2.0.2"
+  }
+}
+

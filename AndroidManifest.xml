@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yourcompany.yourappname">
+    <!-- Internet permission for fetching data -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Camera permission for taking photos -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- Permissions for reading from external storage -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <!-- This permission is required for Android versions prior to Android 10 (API level 29) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:label="Your App Name"
+        android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"> <!-- Important for Android 10 (API level 29) and above -->
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies the Android theme to apply to this Activity as well as the configuration changes. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!-- Don't forget to include your Google Maps API key if your app uses Google Maps -->
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                   android:value="Your_Google_Maps_API_key_here"/>
+    </application>
+</manifest>
+
